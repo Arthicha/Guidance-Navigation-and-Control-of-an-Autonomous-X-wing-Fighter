@@ -15,8 +15,8 @@ This project aims to verify if existing guidance, navigation, and control techni
 
 ## Result
 <p align="center">
-  <img width=auto src="pictures/lookahead_eta_10_100_3d.PNG">
-  <img width=auto src="pictures/lookahead_eta_10_100_2d.PNG">
+  <img width=auto src="pictures/lookahead_eta_10_100_3d.png">
+  <img width=auto src="pictures/lookahead_eta_10_100_2d.png">
   simulation results
 </p>
 
