@@ -3,11 +3,15 @@ This project aims to verify if existing guidance, navigation, and control techni
 
 ## Simulation
 <p align="center">
-  <img width="200" src="pictures/screenshots.PNG" alt="simulation of the autonomous x-wing fighter">
+  <img width=auto src="pictures/screenshots.PNG">
+  simulation of the autonomous x-wing fighter
 </p>
 
 ## Control 
-
+<p align="center">
+  <img width=auto src="pictures/overview.PNG">
+  simulation of the autonomous x-wing fighter
+</p>
 
 ## Running the Simulation
 To run the simulation, navigate to project directiory and run "main.xls".
