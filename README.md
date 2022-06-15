@@ -10,7 +10,14 @@ This project aims to verify if existing guidance, navigation, and control techni
 ## Control 
 <p align="center">
   <img width=auto src="pictures/overview.PNG">
-  simulation of the autonomous x-wing fighter
+  simplified control architecture
+</p>
+
+## Result
+<p align="center">
+  <img width=auto src="pictures/lookahead_eta_10_100_3d.PNG">
+  <img width=auto src="pictures/lookahead_eta_10_100_2d.PNG">
+  simulation results
 </p>
 
 ## Running the Simulation
