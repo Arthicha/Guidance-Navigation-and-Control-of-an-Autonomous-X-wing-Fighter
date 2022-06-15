@@ -1,0 +1,51 @@
+The control of the x-wing fighter consists of two parts: preprocessing (Fig~\ref{fig:overview}(f)) and three controllers (Fig~\ref{fig:overview}(e)). Firstly, the desired velocity from the guidance system (Fig~\ref{fig:overview}(g)) is combined with estimated pose and estimated velocity from the state estimation (Fig~\ref{fig:overview}(h–i)) to produce the reference signals for the controllers. The controllers include (1) a thruster controller producing the control command for differential thruster, (2) a gyroscopic stabilizer controller producing the control command for the gyro-stabilizer, and (3) a repulsorlift controller producing the control command for the repulsolift.
+
+
+\subsubsection{Preprocessing}
+In the preprocessing step, the desired velocity expressed in world-fixed frame is transform to the body-fixed frame ($v^b_d(t) $), which is then utilized for aligning the spaceship heading, according to section~\ref{sec:thruster_control}. The transformation is done according to:
+\begin{equation}
+v^b_d(t) = R^w(\Theta^w)^T v^w_d(t).
+\label{eq:desired_velocity_body}
+\end{equation}
+
+Also, the velocity error in body-fixed frame ($\tilde{v}^b_d(t)$) are computed according to equation~\ref{eq:velocity_error_body}. The body-fixed frame error ($\tilde{v}^w_d(t) $) is employed to drive the x-wing fighter forward, upward, and to change the angle of attack. This will be described in more details in section~\ref{sec:thruster_control} and section~\ref{sec:repulsorlift_control}.
+\begin{equation}
+\tilde{v}^b_d(t) = v^b_d(t) - v^b(t).
+\label{eq:velocity_error_body}
+\end{equation}
+
+
+
+\subsubsection{Thruster Controller}
+\label{sec:thruster_control}
+The thruster controller serves three main purposes: to directly control (1) the forward speed, (2) the heading direction, and to indirectly control (3) the attitude through the pitch angle. All aforementioned quantities are controlled using a standard PD control, according to equation~\ref{eq:PD_control}. 
+\begin{equation}
+u = K_p e(t) + K_d \frac{\Delta e(t)}{ \Delta t},
+\label{eq:PD_control}
+\end{equation}
+where $u$ denotes the control input or the control command, $K_p$ and $K_d$ denote the proportion gain and derivative gain, respectively,  $e(t) $ denotes the error signal, and $\frac{\Delta e(t)}{ \Delta t}$ denotes the time derivative of the error signal. The error signals serve as input to the PD control, and they are from different sources.
+
+\begin{itemize}
+	\item \textit{The error signal for controlling the heading direction} is defined as the sideway velocity. This is to reduce the sideway velocity, and therefore, turning the spaceship toward the direction that maximize forward speed. 
+	\item \textit{The error signal for controlling the forward speed}, which is defined the velocity error in the  frontal direction, drive the robot according to the maximum forward speed toward the target. 
+	\item \textit{The error signal for controlling the pitch angle} is defined as the summation of the pitch offset and the pitch error. The pitch offset ($\tilde{\theta}'^b$) is computed from the attitude velocity error that tilts the spaceship, aiding climbing. This is done  according to equation~\ref{eq:additional_attitude}. The pitch error, however, forces the pitch angle to be around 0.0. It, therefore, limits the desired pitch angle and stabilizes the spaceship.
+\end{itemize}
+
+\begin{equation}
+\tilde{\theta}'^b = 
+\begin{cases}
+K_{p\theta} \tilde{v}^b_z(t) + K_{d\theta} \frac{\Delta \tilde{v}^b_z(t)}{ \Delta t} & \text{if } |\tilde{v}^b_z(t)| \geq k_{\tilde{v}^b_z} \\
+0 & \text{else}
+\end{cases},
+\label{eq:additional_attitude}
+\end{equation}
+where $K_{p\theta}$ and $K_{d\theta}$ denote the proportion gain and the derivative gain which are empirically selected as $1.0\times10^{-4}$ and $1.0\times10^{-3}$ to ensure a small change in pitch angle, $\tilde{v}^b_z(t)$ denotes the velocity error expressed in body-fixed frame, and $k_{\tilde{v}^b_z}$ denotes a threshold which is selected as 1.0 to disable pitch offset when the velocity is less than 1.0 m/s.
+
+
+
+\subsubsection{Gyroscopic Stabilizer Controller}
+The gyroscopic stabilizer has only one function, which is to stabilize the spaceship by avoiding rolling motion. It also employed PD control as shown in equation~\ref{eq:PD_control}, where the error signal is defined as the difference between the roll angle and 0.0. Here, the $K_p$ and $K_d$ are manually selected as 1,000 and 10,000; changing these parameters has a minor effect on the system behavior due to a constant target roll angle throughout the mission.
+
+\subsubsection{Repulsorlift Controller}
+\label{sec:repulsorlift_control}
+The repulsorlift also has one main function, which is to control the vertical velocity. It also employed PD control as shown in equation~\ref{eq:PD_control}, but with a gravity compensation term estimated using equation~\ref{eq:gravitationalforce}. Here, the error signal is defined as the vertical velocity error, and the $K_p$ and $K_d$ are manually selected as 10 and 3,000; changing these parameters also has a minor effect on the system behavior due to gravity compensation term included.

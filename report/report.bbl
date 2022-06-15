@@ -1,0 +1,72 @@
+\begin{thebibliography}{1}
+\providecommand{\url}[1]{#1}
+\csname url@rmstyle\endcsname
+\providecommand{\newblock}{\relax}
+\providecommand{\bibinfo}[2]{#2}
+\providecommand\BIBentrySTDinterwordspacing{\spaceskip=0pt\relax}
+\providecommand\BIBentryALTinterwordstretchfactor{4}
+\providecommand\BIBentryALTinterwordspacing{\spaceskip=\fontdimen2\font plus
+\BIBentryALTinterwordstretchfactor\fontdimen3\font minus
+  \fontdimen4\font\relax}
+\providecommand\BIBforeignlanguage[2]{{%
+\expandafter\ifx\csname l@#1\endcsname\relax
+\typeout{** WARNING: IEEEtran.bst: No hyphenation pattern has been}%
+\typeout{** loaded for the language `#1'. Using the pattern for}%
+\typeout{** the default language instead.}%
+\else
+\language=\csname l@#1\endcsname
+\fi
+#2}}
+
+\bibitem{starwars}
+\BIBentryALTinterwordspacing
+Wikipedia. (2022) Star wars. [Online]. Available:
+  \url{https://en.wikipedia.org/wiki/Star_Wars}
+\BIBentrySTDinterwordspacing
+
+\bibitem{mir}
+\BIBentryALTinterwordspacing
+{Mobile Industrial Robot}. (2022) Mir robotter. [Online]. Available:
+  \url{https://www.mobile-industrial-robots.com/da/?gclid=CjwKCAjw46CVBhB1EiwAgy6M4piY7gPFWFDT9eX_FqUicz7CaV5ADVmEOiLXUqq1Rh0pMsPwaxIfmRoCKzMQAvD_BwE}
+\BIBentrySTDinterwordspacing
+
+\bibitem{mpc_drone}
+K.~Guo, P.~Tang, H.~Wang, D.~Lin, and X.~Cui, ``Autonomous landing of a
+  quadrotor on a moving platform via model predictive control,''
+  \emph{Aerospace}, vol.~9, no.~1, p.~34, 2022.
+
+\bibitem{scimet_paper}
+L.~Kneip, M.~Chli, and R.~Siegwart, ``Robust real-time visual odometry with a
+  single camera and an imu,'' in \emph{Proceedings of the British Machine
+  Vision Conference 2011}.\hskip 1em plus 0.5em minus 0.4em\relax British
+  Machine Vision Association, 2011.
+
+\bibitem{gyros}
+\BIBentryALTinterwordspacing
+Wookieepedia. (2022) Gyroscopic stabilizer. [Online]. Available:
+  \url{https://starwars.fandom.com/wiki/Gyroscopic_stabilizer}
+\BIBentrySTDinterwordspacing
+
+\bibitem{repulsorlift}
+\BIBentryALTinterwordspacing
+------. (2022) Repulsorlift. [Online]. Available:
+  \url{https://starwars.fandom.com/wiki/Repulsorlift}
+\BIBentrySTDinterwordspacing
+
+\bibitem{xwing_wiki}
+\BIBentryALTinterwordspacing
+Wikipedia. (2022) X-wing fighter. [Online]. Available:
+  \url{https://en.wikipedia.org/wiki/X-wing_fighter}
+\BIBentrySTDinterwordspacing
+
+\bibitem{fe2lla}
+\BIBentryALTinterwordspacing
+MathWorks. (2022) Flat earth to lla. [Online]. Available:
+  \url{https://se.mathworks.com/help/aeroblks/flatearthtolla.html}
+\BIBentrySTDinterwordspacing
+
+\bibitem{flightgear}
+A.~R. Perry, ``The flightgear flight simulator,'' in \emph{Proceedings of the
+  USENIX Annual Technical Conference}, vol. 686, 2004.
+
+\end{thebibliography}

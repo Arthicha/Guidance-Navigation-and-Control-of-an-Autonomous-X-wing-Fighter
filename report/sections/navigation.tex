@@ -1,0 +1,80 @@
+To estimate the state of the x-wing fighter using noisy measurement, we first set up the state presentation as follows:
+\begin{equation}
+X(t) = 
+\begin{bmatrix}
+p^w(t) & \dot{p}^w(t) &  \Theta^w(t) & \dot{\Theta}^w(t)
+\end{bmatrix}^T,
+\label{eq:statespace_state}
+\end{equation}
+\begin{equation}
+Y(t) = 
+\begin{bmatrix}
+p^w(t) & \vec{0}^T &  \Theta^w(t) & \vec{0}^T
+\end{bmatrix}^T.
+\label{eq:statespace_measurement}
+\end{equation}
+
+Because of non-linearity, the state space model is shown in equation~\ref{eq:statespace_stateequation}–\ref{eq:statespace_measurementequation}. Note that, at each timestep, force and moment are re-estimated using equation~\ref{eq:sumforce}–\ref{eq:gravitationalforce}, to obtain a linear state space model.
+\begin{equation}
+\hat{X}(t) = A X(t-1) + B f(t) + w(t),
+\label{eq:statespace_stateequation}
+\end{equation}
+\begin{equation}
+\hat{Y}(t) = C \hat{X}(t) + v(t),
+\label{eq:statespace_measurementequation}
+\end{equation}
+where $f(t)$ denotes the linearized estimated force $[F^b(t)^T \; M^b(t)^T]^T$, and
+\begin{equation}
+A = 
+\begin{bmatrix}
+I &  \Delta t I & \underline{0} & \underline{0} \\
+ \underline{0} & I & \underline{0} & \underline{0} \\
+  \underline{0} & \underline{0} & I & \Delta t I \\
+   \underline{0} & \underline{0} & \underline{0} & I 
+\end{bmatrix},
+\label{eq:statespace_A}
+\end{equation}
+\begin{equation}
+B = 
+\begin{bmatrix}
+\underline{0} & \underline{0} \\
+\Delta t I /m & \underline{0} \\
+\underline{0} & \underline{0} \\
+\underline{0} & \Delta t I^{-1} /m
+\end{bmatrix},
+\label{eq:statespace_B}
+\end{equation}
+\begin{equation}
+C = 
+\begin{bmatrix}
+I & \underline{0}  &\underline{0} & \underline{0} \\
+\underline{0} & \underline{0}  & I & \underline{0} 
+\end{bmatrix}.
+\label{eq:statespace_C}
+\end{equation}
+
+With linear state space model, a Kalman filter is utilized for state estimation. The Kalman filter are parameterized by the Kalman gain $K$, model covariance $P$, model state $X$, estimated covariance $\hat{P}$, estimated state $\hat{X}$, process noise covariance$Q$, and measurement noise covariance $R$. In this work, $P$ is initialized as $10I$, while $Q = \lambda_Q I$ and $R = \lambda_R I$. In section~\ref{sec:exp_navigation}, $\lambda_Q$ and $\lambda_R$ are analyzed. 
+
+The Kalman gain/observer gain is updated according to:
+\begin{equation}
+K = P C^T \left( C P C^T + R + \epsilon \right)^{-1},
+\label{eq:kalman_gain}
+\end{equation}
+where $\epsilon$ denotes an arbitrary small value, which is $1.0\times10^{-6}$ in this case. In the prediction step, the estimated state and covariance are computed from:
+\begin{equation}
+\hat{X} = X + K(Y-CX), 
+\label{eq:estimated_state}
+\end{equation}
+\begin{equation}
+\hat{P} = (I - KC) P.
+\label{eq:estimated_covar}
+\end{equation}
+In the correction step, the model's state and covariance are updated according to:
+\begin{equation}
+X = AX + Bf,
+\label{eq:update_state}
+\end{equation}
+\begin{equation}
+P = APA^T + Q.
+\label{eq:update_covar}
+\end{equation}

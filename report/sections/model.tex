@@ -1,0 +1,43 @@
+To simulate the behavior of the x-wing fighter, we assume three actuators: differential thrusters, electromagnetic gyroscopic stabilizer \footnote{A gyroscopic stabilizer, also known as a gyro-stabilizer, is a system of gyroscopes, hydraulics and high-speed processors \cite{gyros}.} \cite{gyros}, and repulsorlift \footnote{Repulsorlift is a technology that allowed a craft to hover or even fly over a planet's surface by pushing against its gravity, producing thrust \cite{repulsorlift}.} \cite{repulsorlift}. Force and moment are the combinations of four terms: force and moment from the differential thrusters, from gyro-stabilizer, repulsorlift, and gravitational force. For simplicity, the central of gravity is assumed to be in the center of the spaceship, and all forces and moments are assumed acting at that location. The total force and moment are computed from equation~\ref{eq:sumforce}–\ref{eq:thrusterforce}.
+\begin{equation}
+\begin{bmatrix} F^b \\ M^b \end{bmatrix} = \kappa
+\begin{bmatrix} u_{t1} \\ u_{t2} \\ u_{t3} \\ u_{t4} \end{bmatrix}
++ k_4 u_{gy} + k_5 u_{re} + \begin{bmatrix} F_g^b \\ 0 \\ 0 \\ 0 \end{bmatrix},
+\label{eq:sumforce}
+\end{equation}
+\begin{equation}
+\kappa = \begin{bmatrix} k_1 & k_1 & k_1 & k_1\\
+0 & 0 & 0 & 0 \\
+0 & 0 & 0 & 0 \\
+0 & 0 & 0 & 0 \\
+-k_2 & -k_2 & k_2 & k_2 \\
+k_3 & -k_3 & k_3 & -k_3 
+\end{bmatrix},
+\label{eq:thrusterforce}
+\end{equation}
+where $F^b$ and $M^b$ denotes the force and moment applied at the center of mass of the spaceship and with respect to in body-fixed frame; $u_{ti}$, $u_{gy}$, and $u_{re}$ denotes the control input to the $i^th$ thruster, gyro-stabilizer, and repulsorlift, respectively; $F^b_g$ denotes the gravitational force expressed in the body-fixed frame, and $k_1$–$k_5$ denote the gain which are found to be $2.5\times10^3$, $6.8\times10^3$, $1.425\times10^4$, $1.0\times10^4$ and $1.0\times10^4$, respectively\footnote{All gains are computed from the kinematics of the x-wing fighter}. Note that, lifting force is excluded here due to the symmetric structure of the wings.
+
+In this work, gravitational force is modeled as variable term with inverse relationship with the height, as shown in equation~\ref{eq:gravitationalforce}.
+\begin{equation}
+F_g^b = R^w(\Theta^w)^T \begin{bmatrix} 0 \\ 0 \\ \frac{GmM_e}{r^2} \end{bmatrix} ,
+\label{eq:gravitationalforce}
+\end{equation}
+ where $R^w(\Theta^w)$ denotes the rotation matrix computed from spaceship orientation with respect to the world-fixed frame, $G$ denotes the gravitational constant which is $6.6726\times10^{-11}~ Nm^2/kg^2$, $M_e$ denotes the earth mass which is $5.98\times10^{24}~kg$, and $r$ denote the distance from the earth center.
+
+The spaceship pose with respect to world-fixed frame is modeled according to equation~\ref{eq:dynamic} and \ref{eq:velocity_transform}. To simulate measurement noise, white noise with zero mean and $[5\:\text{m}, 5\:\text{m}, 5\:\text{m}, 0.1\:\text{rad}, 0.1\:\text{rad},0.1\:\text{rad}]^T$standard deviation is also added to the pose.
+\begin{align}
+\begin{bmatrix} \dot{v}^b \\ \dot{\omega}^b \end{bmatrix} = \begin{bmatrix}mI & \underline{0} \\ \underline{0} & I_c \end{bmatrix}
+^{-1} \left( 
+\begin{bmatrix} F^b - m \left[ \omega^b \right]_\times v^b \\ M^b + \left[ I_c \omega^b \right]_\times \omega^b \end{bmatrix}
+ \right ),
+\label{eq:dynamic}
+\end{align}
+\begin{equation}
+\begin{bmatrix} \dot{p}^w \\ \dot{\Theta}^w \end{bmatrix} = \begin{bmatrix}R^w(\Theta^w) & \underline{0} \\ \underline{0} & T(\Theta^w) \end{bmatrix} 
+\begin{bmatrix} v^b \\ \omega^b \end{bmatrix},
+\label{eq:velocity_transform}
+\end{equation}
+where $v^b$ and $\omega^b$ denote the spaceship twist (i.e., linear and angular velocity) with respect to in the body-fixed frame, $p^w$ and $\Theta^w$ denote the spaceship pose (i.e., position and orientation) with respect to in the world-fixed frame, $m$ denotes the mass which is 10,000 kg \cite{xwing_wiki}, $\underline{0}$ and $I$ denote 3-by-3 zero matrix and 3-by-3 identity matrix, respectively , $I_c$ denote the inertia matrix calculated from CAD software, $[\square]_\times$ denote the skew symmetric matrix, and $T(\Theta^w)$ denotes the transformation matrix transforming the velocity from body-fixed frame to world-fixed frame (i.e., from $\omega^b$ to $\Theta^w$).  
+
+
+The spaceship pose with respect to in world-fixed frame is then converted from flat earth coordinate system to latitude-longitude-altitude coordinate system using standard MATLAB simulink block \cite{fe2lla}. Finally it is sent to the FlightGear \cite{flightgear} simulation to visualize the behavior.
