@@ -13,6 +13,10 @@ This project aims to verify if existing guidance, navigation, and control techni
   simplified control architecture
 </p>
 
+
+## Running the Simulation
+To run the simulation, navigate to project directiory and run "main.xls".
+
 ## Result
 <p align="center">
   <img width=auto src="pictures/lookahead_eta_10_100_3d.png">
@@ -20,12 +24,10 @@ This project aims to verify if existing guidance, navigation, and control techni
   simulation results
 </p>
 
-## Running the Simulation
-To run the simulation, navigate to project directiory and run "main.xls".
 
 
 ## Videos
 
-[![Alt text](https://youtu.be/vUd8cK0Ot9s)](https://youtu.be/vUd8cK0Ot9s)
+<iframe width="560" height="315" src="https://www.youtube.com/embed/vUd8cK0Ot9s" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
-[![Alt text](https://youtu.be/I14YKMaBpRg)](https://youtu.be/I14YKMaBpRg)
+[![Demo2](https://youtu.be/I14YKMaBpRg)](https://youtu.be/I14YKMaBpRg)
