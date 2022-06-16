@@ -164,12 +164,12 @@ Fixing $\lambda_Q=1$, $:\lambda_R=1,000$, $K_p=1,000$ and $K_d=1,500$, the third
 
  The result of the third experiment is shown in Fig.~\ref{fig:exp_lookahead}. The figure presents that, changing increasing $\eta_e$ improves the response of the system, while increasing $\eta_\Delta$ disable the spaceship to move between close waypoints. Setting $\eta_\Delta$ to 100 seems to be an optimal point. If we increase it beyond this, the x-wing fighter will lose the ability to reach the next waypoint that locates close to the previous one. The spaceship might be unable to reach the acceptance sphere as highlighted by the red circles in Fig.~\ref{fig:exp_lookahead}(a,b). This is because, the lookahead distance go over the next waypoint, and the x-wing fighter's guidance system cannot see it. $\eta_e$ has a significant effect in reducing the root-mean-square error between the trajectory and the expected linear segment between waypoints. The error drops from 6.98 km to 6.66 km if $\eta_e=1.0$ and to 6.38 km if $\eta_e=2.0$. Setting this value to high can causes multiple oscillation even if the spaceship perfectly stays on a strength path for a while, as shown in Fig.~\ref{fig:exp_lookahead}(g,h). 
  
- The most appropriate set of parameters is found to be $\lambda_Q=1$, $:\lambda_R=1,000$, $K_p=1,000$ $K_d=1,500$, $\eta_e=1.0$, and $\eta_\Delta=100$. With this set of parameters, the autonomous x-wing fighter is simulated, and the video is available at \textcolor{red}{xxxxxxxxxxxxxx}.
+ The most appropriate set of parameters is found to be $\lambda_Q=1$, $:\lambda_R=1,000$, $K_p=1,000$ $K_d=1,500$, $\eta_e=1.0$, and $\eta_\Delta=100$. With this set of parameters, the autonomous x-wing fighter is simulated, and the video is available at \href{https://youtu.be/vUd8cK0Ot9s}{\url{https://youtu.be/vUd8cK0Ot9s}}.
 
 \begin{figure}[!h]
 	\centering
 	\includegraphics[width=1.0\linewidth]{figures/screenshots}
-	\caption{Screenshots from the demonstration video.}
+	\caption{Screenshots from the demonstration video. The video is available at \href{https://youtu.be/vUd8cK0Ot9s}{\url{https://youtu.be/vUd8cK0Ot9s}}.}
 	\label{fig:screenshot}
 \end{figure}
 

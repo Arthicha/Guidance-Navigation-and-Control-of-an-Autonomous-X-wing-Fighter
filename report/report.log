@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.23 (MiKTeX 21.10) (preloaded format=pdflatex 2021.10.28)  15 JUN 2022 03:44
+This is pdfTeX, Version 3.141592653-2.6-1.40.23 (MiKTeX 21.10) (preloaded format=pdflatex 2021.10.28)  15 JUN 2022 19:53
 entering extended mode
 **./report.tex
 (report.tex
@@ -438,6 +438,9 @@ Package: booktabs 2020/01/12 v1.61803398 Publication quality tables
 \@lastruleclass=\count296
 \@thisrulewidth=\dimen196
 )
+(C:\Program Files\MiKTeX\tex/latex/xurl\xurl.sty
+Package: xurl 2022/01/09 v 0.10 modify URL breaks
+)
 (C:\Program Files\MiKTeX\tex/latex/l3backend\l3backend-pdftex.def
 File: l3backend-pdftex.def 2021-10-12 L3 backend support: PDF output (pdfTeX)
 \l__color_backend_stack_int=\count297
@@ -509,22 +512,23 @@ LaTeX Info: Redefining \nameref on input line 18.
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: End \AtBeginDocument code.
  (sections/intro.tex) (sections/overview.tex
-<figures/overview.png, id=92, 1477.9215pt x 570.33075pt>
+LaTeX Font Info:    Trying to load font information for U+msa on input line 2.
+
+(C:\Program Files\MiKTeX\tex/latex/amsfonts\umsa.fd
+File: umsa.fd 2013/01/14 v3.01 AMS symbols A
+)
+LaTeX Font Info:    Trying to load font information for U+msb on input line 2.
+
+(C:\Program Files\MiKTeX\tex/latex/amsfonts\umsb.fd
+File: umsb.fd 2013/01/14 v3.01 AMS symbols B
+)
+<figures/overview.png, id=94, 1477.9215pt x 570.33075pt>
 File: figures/overview.png Graphic file (type png)
 <use figures/overview.png>
 Package pdftex.def Info: figures/overview.png  used on input line 6.
 (pdftex.def)             Requested size: 438.60315pt x 169.2556pt.
-)
-(sections/model.tex
-LaTeX Font Info:    Trying to load font information for U+msa on input line 1.
- (C:\Program Files\MiKTeX\tex/latex/amsfonts\umsa.fd
-File: umsa.fd 2013/01/14 v3.01 AMS symbols A
-)
-LaTeX Font Info:    Trying to load font information for U+msb on input line 1.
-
-(C:\Program Files\MiKTeX\tex/latex/amsfonts\umsb.fd
-File: umsb.fd 2013/01/14 v3.01 AMS symbols B
-) [1{C:/Users/ZumoArthicha/AppData/Local/MiKTeX/pdftex/config/pdftex.map}
+) (sections/model.tex
+[1{C:/Users/ZumoArthicha/AppData/Local/MiKTeX/pdftex/config/pdftex.map}
 
 
 ]
@@ -533,55 +537,51 @@ Underfull \hbox (badness 2173) in paragraph at lines 27--28
 
  []
 
-) (sections/guidance.tex
-<figures/lookahead_normal.png, id=142, 828.696pt x 458.9145pt>
+) (sections/guidance.tex [2 <./figures/overview.png>]
+<figures/lookahead_normal.png, id=161, 828.696pt x 458.9145pt>
 File: figures/lookahead_normal.png Graphic file (type png)
 <use figures/lookahead_normal.png>
 Package pdftex.def Info: figures/lookahead_normal.png  used on input line 43.
 (pdftex.def)             Requested size: 176.39923pt x 97.68434pt.
-
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-[2 <./figures/overview.png>]) (sections/control.tex [3 <./figures/lookahead_nor
-mal.png>]) (sections/navigation.tex
+) (sections/control.tex
+[3 <./figures/lookahead_normal.png>]) (sections/navigation.tex
 Underfull \hbox (badness 10000) in paragraph at lines 25--27
 \OT1/ptm/m/n/10 where $\OML/cmm/m/it/10 f\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 t\OT
 1/cmr/m/n/10 )$ \OT1/ptm/m/n/10 de-notes the lin-earized es-ti-mated force
  []
 
 ) (section/experiment.tex
-<figures/estimate_P1_Q10_2d.png, id=192, 1020.81375pt x 1026.234pt>
+<figures/estimate_P1_Q10_2d.png, id=196, 1020.81375pt x 1026.234pt>
 File: figures/estimate_P1_Q10_2d.png Graphic file (type png)
 <use figures/estimate_P1_Q10_2d.png>
 Package pdftex.def Info: figures/estimate_P1_Q10_2d.png  used on input line 13.
 
 (pdftex.def)             Requested size: 123.84283pt x 124.48944pt.
-<figures/estimate_P1_Q10_3d.png, id=193, 956.97525pt x 933.4875pt>
+<figures/estimate_P1_Q10_3d.png, id=197, 956.97525pt x 933.4875pt>
 File: figures/estimate_P1_Q10_3d.png Graphic file (type png)
 <use figures/estimate_P1_Q10_3d.png>
 Package pdftex.def Info: figures/estimate_P1_Q10_3d.png  used on input line 19.
 
 (pdftex.def)             Requested size: 123.84283pt x 120.80212pt.
-<figures/estimate_P1_Q100_2d.png, id=194, 612.48825pt x 615.7404pt>
+<figures/estimate_P1_Q100_2d.png, id=198, 612.48825pt x 615.7404pt>
 File: figures/estimate_P1_Q100_2d.png Graphic file (type png)
 <use figures/estimate_P1_Q100_2d.png>
 Package pdftex.def Info: figures/estimate_P1_Q100_2d.png  used on input line 25
 .
 (pdftex.def)             Requested size: 123.84283pt x 124.49884pt.
-<figures/estimate_P1_Q100_3d.png, id=195, 574.18515pt x 560.0925pt>
+<figures/estimate_P1_Q100_3d.png, id=199, 574.18515pt x 560.0925pt>
 File: figures/estimate_P1_Q100_3d.png Graphic file (type png)
 <use figures/estimate_P1_Q100_3d.png>
 Package pdftex.def Info: figures/estimate_P1_Q100_3d.png  used on input line 31
 .
 (pdftex.def)             Requested size: 123.84283pt x 120.80212pt.
-<figures/estimate_P1_Q1000_2d.png, id=196, 612.48825pt x 615.7404pt>
+<figures/estimate_P1_Q1000_2d.png, id=200, 612.48825pt x 615.7404pt>
 File: figures/estimate_P1_Q1000_2d.png Graphic file (type png)
 <use figures/estimate_P1_Q1000_2d.png>
 Package pdftex.def Info: figures/estimate_P1_Q1000_2d.png  used on input line 3
 7.
 (pdftex.def)             Requested size: 123.84283pt x 124.49884pt.
-<figures/estimate_P1_Q1000_3d.png, id=197, 574.18515pt x 560.0925pt>
+<figures/estimate_P1_Q1000_3d.png, id=201, 574.18515pt x 560.0925pt>
 File: figures/estimate_P1_Q1000_3d.png Graphic file (type png)
 <use figures/estimate_P1_Q1000_3d.png>
 Package pdftex.def Info: figures/estimate_P1_Q1000_3d.png  used on input line 4
@@ -591,32 +591,32 @@ Package pdftex.def Info: figures/estimate_P1_Q1000_3d.png  used on input line 4
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-<figures/Dgain_D05_2d.png, id=200, 612.48825pt x 615.0177pt>
+<figures/Dgain_D05_2d.png, id=204, 612.48825pt x 615.0177pt>
 File: figures/Dgain_D05_2d.png Graphic file (type png)
 <use figures/Dgain_D05_2d.png>
 Package pdftex.def Info: figures/Dgain_D05_2d.png  used on input line 64.
 (pdftex.def)             Requested size: 123.84283pt x 124.3527pt.
-<figures/Dgain_D05_3d.png, id=201, 574.18515pt x 560.0925pt>
+<figures/Dgain_D05_3d.png, id=205, 574.18515pt x 560.0925pt>
 File: figures/Dgain_D05_3d.png Graphic file (type png)
 <use figures/Dgain_D05_3d.png>
 Package pdftex.def Info: figures/Dgain_D05_3d.png  used on input line 70.
 (pdftex.def)             Requested size: 123.84283pt x 120.80212pt.
-<figures/Dgain_D10_2d.png, id=202, 612.48825pt x 615.0177pt>
+<figures/Dgain_D10_2d.png, id=206, 612.48825pt x 615.0177pt>
 File: figures/Dgain_D10_2d.png Graphic file (type png)
 <use figures/Dgain_D10_2d.png>
 Package pdftex.def Info: figures/Dgain_D10_2d.png  used on input line 76.
 (pdftex.def)             Requested size: 123.84283pt x 124.3527pt.
-<figures/Dgain_D10_3d.png, id=203, 574.18515pt x 560.0925pt>
+<figures/Dgain_D10_3d.png, id=207, 574.18515pt x 560.0925pt>
 File: figures/Dgain_D10_3d.png Graphic file (type png)
 <use figures/Dgain_D10_3d.png>
 Package pdftex.def Info: figures/Dgain_D10_3d.png  used on input line 82.
 (pdftex.def)             Requested size: 123.84283pt x 120.80212pt.
-<figures/Dgain_D15_2d.png, id=204, 612.48825pt x 615.0177pt>
+<figures/Dgain_D15_2d.png, id=208, 612.48825pt x 615.0177pt>
 File: figures/Dgain_D15_2d.png Graphic file (type png)
 <use figures/Dgain_D15_2d.png>
 Package pdftex.def Info: figures/Dgain_D15_2d.png  used on input line 88.
 (pdftex.def)             Requested size: 123.84283pt x 124.3527pt.
-<figures/Dgain_D15_3d.png, id=205, 574.18515pt x 560.0925pt>
+<figures/Dgain_D15_3d.png, id=209, 574.18515pt x 560.0925pt>
 File: figures/Dgain_D15_3d.png Graphic file (type png)
 <use figures/Dgain_D15_3d.png>
 Package pdftex.def Info: figures/Dgain_D15_3d.png  used on input line 94.
@@ -629,55 +629,55 @@ LaTeX Warning: `h' float specifier changed to `ht'.
 LaTeX Warning: No positions in optional float specifier.
                Default added (so using `tbp') on input line 111.
 
-<figures/lookahead_eta_01_150_2d.png, id=224, 1035.26775pt x 1025.63174pt>
+<figures/lookahead_eta_01_150_2d.png, id=228, 1035.26775pt x 1025.63174pt>
 File: figures/lookahead_eta_01_150_2d.png Graphic file (type png)
 <use figures/lookahead_eta_01_150_2d.png>
 Package pdftex.def Info: figures/lookahead_eta_01_150_2d.png  used on input lin
 e 115.
 (pdftex.def)             Requested size: 123.84283pt x 122.67924pt.
-<figures/lookahead_eta_01_150_3d.png, id=225, 956.97525pt x 933.4875pt>
+<figures/lookahead_eta_01_150_3d.png, id=229, 956.97525pt x 933.4875pt>
 File: figures/lookahead_eta_01_150_3d.png Graphic file (type png)
 <use figures/lookahead_eta_01_150_3d.png>
 Package pdftex.def Info: figures/lookahead_eta_01_150_3d.png  used on input lin
 e 121.
 (pdftex.def)             Requested size: 123.84283pt x 120.80212pt.
-<figures/lookahead_eta_01_100_2d.png, id=226, 612.48825pt x 615.37904pt>
+<figures/lookahead_eta_01_100_2d.png, id=230, 612.48825pt x 615.37904pt>
 File: figures/lookahead_eta_01_100_2d.png Graphic file (type png)
 <use figures/lookahead_eta_01_100_2d.png>
 Package pdftex.def Info: figures/lookahead_eta_01_100_2d.png  used on input lin
 e 127.
 (pdftex.def)             Requested size: 123.84283pt x 124.42577pt.
-<figures/lookahead_eta_01_100_3d.png, id=227, 574.18515pt x 560.0925pt>
+<figures/lookahead_eta_01_100_3d.png, id=231, 574.18515pt x 560.0925pt>
 File: figures/lookahead_eta_01_100_3d.png Graphic file (type png)
 <use figures/lookahead_eta_01_100_3d.png>
 Package pdftex.def Info: figures/lookahead_eta_01_100_3d.png  used on input lin
 e 133.
 (pdftex.def)             Requested size: 123.84283pt x 120.80212pt.
-<figures/lookahead_eta_10_100_2d.png, id=228, 612.48825pt x 615.37904pt>
+<figures/lookahead_eta_10_100_2d.png, id=232, 612.48825pt x 615.37904pt>
 File: figures/lookahead_eta_10_100_2d.png Graphic file (type png)
 <use figures/lookahead_eta_10_100_2d.png>
 Package pdftex.def Info: figures/lookahead_eta_10_100_2d.png  used on input lin
 e 139.
 (pdftex.def)             Requested size: 123.84283pt x 124.42577pt.
-<figures/lookahead_eta_10_100_3d.png, id=229, 574.18515pt x 560.0925pt>
+<figures/lookahead_eta_10_100_3d.png, id=233, 574.18515pt x 560.0925pt>
 File: figures/lookahead_eta_10_100_3d.png Graphic file (type png)
 <use figures/lookahead_eta_10_100_3d.png>
 Package pdftex.def Info: figures/lookahead_eta_10_100_3d.png  used on input lin
 e 145.
 (pdftex.def)             Requested size: 123.84283pt x 120.80212pt.
-<figures/lookahead_eta_20_100_2d.png, id=230, 612.48825pt x 615.37904pt>
+<figures/lookahead_eta_20_100_2d.png, id=234, 612.48825pt x 615.37904pt>
 File: figures/lookahead_eta_20_100_2d.png Graphic file (type png)
 <use figures/lookahead_eta_20_100_2d.png>
 Package pdftex.def Info: figures/lookahead_eta_20_100_2d.png  used on input lin
 e 151.
 (pdftex.def)             Requested size: 123.84283pt x 124.42577pt.
-<figures/lookahead_eta_20_100_3d.png, id=231, 574.18515pt x 560.0925pt>
+<figures/lookahead_eta_20_100_3d.png, id=235, 574.18515pt x 560.0925pt>
 File: figures/lookahead_eta_20_100_3d.png Graphic file (type png)
 <use figures/lookahead_eta_20_100_3d.png>
 Package pdftex.def Info: figures/lookahead_eta_20_100_3d.png  used on input lin
 e 157.
 (pdftex.def)             Requested size: 123.84283pt x 120.80212pt.
-<figures/screenshots.png, id=235, 984.0765pt x 283.0575pt>
+<figures/screenshots.png, id=241, 984.0765pt x 283.0575pt>
 File: figures/screenshots.png Graphic file (type png)
 <use figures/screenshots.png>
 Package pdftex.def Info: figures/screenshots.png  used on input line 171.
@@ -687,28 +687,7 @@ ures/estimate_P1_Q100_2d.png> <./figures/estimate_P1_Q100_3d.png> <./figures/es
 timate_P1_Q1000_2d.png> <./figures/estimate_P1_Q1000_3d.png> <./figures/Dgain_D
 05_2d.png> <./figures/Dgain_D05_3d.png> <./figures/Dgain_D10_2d.png> <./figures
 /Dgain_D10_3d.png> <./figures/Dgain_D15_2d.png> <./figures/Dgain_D15_3d.png>])
-(sections/conclusion.tex) (report.bbl
-Underfull \hbox (badness 4940) in paragraph at lines 29--32
-[]\OT1/ptm/m/n/8 Mobile In-dus-trial Robot. (2022) Mir robot-ter.
- []
-
-
-Underfull \hbox (badness 3919) in paragraph at lines 29--32
-\OT1/ptm/m/n/8 [On-line]. Avail-able: []$https : / / www . mobile-[]industrial-
-[]robots . com /
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 29--32
-\OT1/ptm/m/n/8 da / ?gclid = CjwKCAjw46CVBhB1EiwAgy6M4piY7gPFWFDT9eX[]
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 29--32
-\OT1/ptm/m/n/8 FqUicz7CaV5ADVmEOiLXUqq1Rh0pMsPwaxIfmRoCKzMQAvD[]
- []
-
-)
+(sections/conclusion.tex) (report.bbl)
 
 ** Conference Paper **
 Before submitting the final camera ready copy, remember to:
@@ -729,13 +708,13 @@ Package rerunfilecheck Info: File `report.out' has not changed.
 (rerunfilecheck)             Checksum: A1D097F7CFF1331F395EA99BC4F9A0CC;2893.
  ) 
 Here is how much of TeX's memory you used:
- 12221 strings out of 478927
- 189893 string characters out of 2862370
- 521285 words of memory out of 3000000
- 29797 multiletter control sequences out of 15000+600000
+ 12239 strings out of 478927
+ 190419 string characters out of 2862370
+ 523627 words of memory out of 3000000
+ 29811 multiletter control sequences out of 15000+600000
  445125 words of font info for 107 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 60i,15n,66p,1182b,507s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 60i,15n,66p,1182b,615s stack positions out of 5000i,500n,10000p,200000b,80000s
 {C:/Program Files/MiKTeX/fonts/enc/dvips/base/8r.enc}<C:/Program Files/MiKTeX
 /fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Program Files/MiKTeX/fonts/type1
 /public/amsfonts/cm/cmmi10.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsf
@@ -752,9 +731,9 @@ X/fonts/type1/public/amsfonts/cm/cmsy7.pfb><C:/Program Files/MiKTeX/fonts/type1
 mes/utmb8a.pfb><C:/Program Files/MiKTeX/fonts/type1/urw/times/utmbi8a.pfb><C:/P
 rogram Files/MiKTeX/fonts/type1/urw/times/utmr8a.pfb><C:/Program Files/MiKTeX/f
 onts/type1/urw/times/utmri8a.pfb>
-Output written on report.pdf (6 pages, 7189074 bytes).
+Output written on report.pdf (6 pages, 7191487 bytes).
 PDF statistics:
- 377 PDF objects out of 1000 (max. 8388607)
+ 388 PDF objects out of 1000 (max. 8388607)
  70 named destinations out of 1000 (max. 500000)
  260 words of extra memory for PDF output out of 10000 (max. 10000000)
 
