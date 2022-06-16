@@ -22,3 +22,10 @@ This project aims to verify if existing guidance, navigation, and control techni
 
 ## Running the Simulation
 To run the simulation, navigate to project directiory and run "main.xls".
+
+
+## Videos
+
+[![Alt text](https://youtu.be/vUd8cK0Ot9s)](https://youtu.be/vUd8cK0Ot9s)
+
+[![Alt text](https://youtu.be/I14YKMaBpRg)](https://youtu.be/I14YKMaBpRg)
