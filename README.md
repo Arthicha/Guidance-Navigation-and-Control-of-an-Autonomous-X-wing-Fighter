@@ -25,9 +25,8 @@ To run the simulation, navigate to project directiory and run "main.xls".
 </p>
 
 
-
 ## Videos
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/vUd8cK0Ot9s" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+[![Demo1](https://youtu.be/vUd8cK0Ot9s)](https://youtu.be/vUd8cK0Ot9s)
 
 [![Demo2](https://youtu.be/I14YKMaBpRg)](https://youtu.be/I14YKMaBpRg)
