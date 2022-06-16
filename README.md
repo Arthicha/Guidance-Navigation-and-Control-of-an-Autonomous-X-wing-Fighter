@@ -17,11 +17,10 @@ This project aims to verify if existing guidance, navigation, and control techni
 ## Running the Simulation
 To run the simulation, navigate to project directiory and run "main.xls".
 
-If you want to simulate the x-wing fighter in FlightGear, please also add the following setting to "settings" -> "additional settings" in FlightGear.
+You can simulate the x-wing fighter without FlightGear (using simulink plot). To do this you have to comment the flightgear interface block before running the simulation. On the other hand, if you want to simulate the x-wing fighter with FlightGear, please also add the following setting to "settings" -> "additional settings" in FlightGear.
 ```
 --aircraft=xwing --fdm=null --enable-auto-coordination --native-fdm=socket,in,30,localhost,5502,udp --fog-disable --enable-clouds3d --start-date-lat=2004:06:01:9:00:00 --enable-sound --visibility=15000 --in-air --prop:/engines/engine0/running=true --disable-freeze --altitude=0 --heading=0 --offset-distance=0 --offset-azimuth=0 --enable-rembrandt  --fg-scenery=%ProgramFiles%/FlightGear/data/Scenery-Airspace:%ProgramFiles%/FlightGear/data/Scenery
 ```
-
 
 ## Result
 <p align="center">
